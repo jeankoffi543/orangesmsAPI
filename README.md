@@ -6,6 +6,9 @@ orangesmsAPI
 **INSTALLATION** 
 
 	composer require 3kjos/orangesmsapi
+**OR if you et error use**
+
+	composer require 3kjos/orangesmsapi:dev-main
 
 **USAGE**
 
