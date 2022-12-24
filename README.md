@@ -3,7 +3,9 @@ send sms, get token, get status, get pourchases, get balance
 orangesmsAPI
 
 
-**INSTALLATION composer require 3kjos/orangesmsapi**
+**INSTALLATION** 
+
+<sub>composer require 3kjos/orangesmsapi</sub>
 
 **USAGE**
 
