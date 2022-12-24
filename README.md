@@ -5,35 +5,61 @@ orangesmsAPI
 
 **INSTALLATION** 
 
-<sub>composer require 3kjos/orangesmsapi</sub>
+	composer require 3kjos/orangesmsapi
 
 **USAGE**
 
-	<sup>use Kjos\Sms</sup>
+	use Kjos\Sms
 
 **Without token**
 
-<sub>$config = ['client_id' => $client_id, 'client_secret' => $client_secret];</sub>
-//$config = ['client_id' => $client_id, 'client_secret' => $client_secret, 'ressource_id' => $ressource_id, 'verify_peerSSL' => $verify_peerSSL];
+	$config = ['client_id' => $client_id, 'client_secret' => $client_secret];
 
-$message = "Hello World!";
+**With token**
+	
+	$config = ['access_token' => "SOME TOKENS"];
 
-$sms = new OrangeSms($config); $sms->setRecipientPhoneNumber($recipientPhoneNumber); $sms->setSenderAddress($ourDevPhoneNumber); $sms->setMessage($message); $result = $sms->sendSms();
+**More options: ressource_id and, verify_peerSSL**
+	
+	$config = ['client_id' => $client_id, 'client_secret' => $client_secret, 'ressource_id' => $ressource_id, 'verify_peerSSL' => $verify_peerSSL];
 
-*With token generation $sms = new OrangeSms($config);
+	
 
-/* $sms->generateToken(); $token = $sms->getAccessToken(); $config = ['access_token' => $token]; */ $config = ['access_token' => "SOME TOKENS"];
+**After Config, add this code:**
+	
+	$sms = new OrangeSms($config);
+	
+	$message = "Hello World!";
 
-$sms->setRecipientPhoneNumber($recipientPhoneNumber); $sms->setSenderAddress($ourDevPhoneNumber); $sms->setMessage($message); $result = $sms->sendSms();
+	$sms->setRecipientPhoneNumber($recipientPhoneNumber); 
+	$sms->setSenderAddress($ourDevPhoneNumber); 
+	$sms->setMessage($message); 
+	$result = $sms->sendSms();
 
-GET POUSCHASE HISTORY $sms->getSmsPourchaseHistory();
 
-GET SMS USAGE $sms->getSmsUsage();
 
-GET SMS BALANCE $sms->getSmsBalance();
+**GET POUSCHASE HISTORY** 
 
-GET AUTHORIZATION HEADER $sms->generateAuthorizationHeader();
+	$smsPourchaseHistory = $sms->getSmsPourchaseHistory();
 
-OTHERS $sms->setSenderName("Your Campany");
+**GET SMS USAGE **
 
-OPTION $sms->setAccept("application/json"); // default : application/json $sms->setAccept("application/x-www-form-urlencoded"); // default : application/x-www-form-urlencoded $sms->setGrantType("client_credentials"); // default : client_credentials
+	$smsUsage = $sms->getSmsUsage();
+
+**GET SMS BALANCE **
+
+	$smsBalance = $sms->getSmsBalance();
+
+**GET AUTHORIZATION HEADER **
+
+	$smsAuthorizationHeader = $sms->generateAuthorizationHeader();
+
+**with campany name** 
+
+	$senderName = $sms->setSenderName("Your Campany");
+
+**OTHER OPTIONS** 
+
+	$sms->setAccept("application/json"); // default : "application/json" 
+	$sms->setAccept("application/x-www-form-urlencoded"); // default : "application/x-www-form-urlencoded"
+	$sms->setGrantType("client_credentials"); // default : "client_credentials"
