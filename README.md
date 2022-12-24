@@ -9,7 +9,7 @@ orangesmsAPI
 
 **USAGE**
 
-	<sub> use Kjos\Sms</sub>
+	<sup>use Kjos\Sms</sup>
 
 **Without token**
 
