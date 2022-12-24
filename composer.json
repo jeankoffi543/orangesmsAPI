@@ -2,6 +2,7 @@
     "name": "kjos/orangesmsapi",
     "description": "send sms, get token, get status, get pourchases, get balance",
     "type": "library",
+    "license": "proprietary",
     "autoload": {
         "psr-4": {
             "Kjos\\Orangesmsapi\\": "src/"
