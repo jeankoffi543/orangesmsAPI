@@ -42,15 +42,15 @@ orangesmsAPI
 
 	$smsPourchaseHistory = $sms->getSmsPourchaseHistory();
 
-**GET SMS USAGE **
+**GET SMS USAGE**
 
 	$smsUsage = $sms->getSmsUsage();
 
-**GET SMS BALANCE **
+**GET SMS BALANCE**
 
 	$smsBalance = $sms->getSmsBalance();
 
-**GET AUTHORIZATION HEADER **
+**GET AUTHORIZATION HEADER**
 
 	$smsAuthorizationHeader = $sms->generateAuthorizationHeader();
 
