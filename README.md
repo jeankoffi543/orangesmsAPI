@@ -5,10 +5,10 @@ orangesmsAPI
 
 **INSTALLATION** 
 
-	composer require 3kjos/orangesmsapi
+	composer require kjos/orangesmsapi
 **OR if you get error use**
 
-	composer require 3kjos/orangesmsapi:dev-main
+	composer require kjos/orangesmsapi:dev-main
 
 **USAGE**
 
