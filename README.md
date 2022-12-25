@@ -12,7 +12,7 @@ orangesmsAPI
 
 **USAGE**
 
-	use Kjos\Sms
+	use Kjos\Sms\OrangeSms;
 
 **Without token**
 
