@@ -6,7 +6,7 @@
     "license": "proprietary",
     "autoload": {
         "psr-4": {
-            "Kjos\\Orangesmsapi\\": "kjos/"
+            "Kjos\\Sms\\": "kjos/"
         }
     },
     "authors": [
